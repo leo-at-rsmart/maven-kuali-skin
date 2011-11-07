@@ -579,7 +579,7 @@ width: 100%;
 }
 </style>
 <script type="text/javascript">var contextPath = '';</script>
-<script language="javascript" src="/js/com.atlassian.auiplugin:ajs.js"/>
+<script language="javascript" src="/js/ajs.js"/>
 <script language="javascript" src="/js/jira-global.js"/>
 <script language="javascript" src="/js/jquery-fancybox.js"/>
 <script language="javascript" src="/js/calendar.js"/>
