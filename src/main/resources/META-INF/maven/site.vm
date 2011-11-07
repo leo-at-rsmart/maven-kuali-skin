@@ -741,26 +741,12 @@ width: 100%;
 		<div class='inner'>
 						<div class='left-col'>
 				<div class='field field-name-body field-type-text-with-summary field-label-hidden'><div class='field-items'><div class='field-item even' property='content:encoded'>
-      <b:section class='subheader' id='subheader' maxwidgets='1' showaddelement='no'>
-<b:widget id='Header1' locked='true' title='Kualigan (Header)' type='Header'/>
-</b:section>
-
-<hr/>
-         <div id='blog-wrapper'>
-        <b:section class='blog' id='blog' showaddelement='no'>
-<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'/>
-</b:section>
 </div>
 
 </div></div></div>			</div>
 							<div class='right-col'>
-										<div class='field field-name-field-sidebar field-type-text-long field-label-hidden'><div class='field-items'><div class='field-item even'><b:section class='sidebar' id='sidebar' preferred='yes'>
-<b:widget id='Profile1' locked='false' title='About Me' type='Profile'/>
-<b:widget id='Subscribe1' locked='false' title='Subscribe To' type='Subscribe'/>
-<b:widget id='Label1' locked='false' title='Labels' type='Label'/>
-<b:widget id='PageList1' locked='false' title='Pages' type='PageList'/>
-<b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'/>
-</b:section>
+										<div class='field field-name-field-sidebar field-type-text-long field-label-hidden'><div class='field-items'><div class='field-item even'>
+
       </div></div></div>				</div>
 					</div>
 </div></div>
