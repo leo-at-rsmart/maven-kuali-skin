@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	
+	<!-- 
+		The default build of this project targets a servlet 2.4 web container.  Profiles are provided for
+		targeting different environments.
+	 -->
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.kuali.maven.skins</groupId>
+	<artifactId>maven-kuali-skin</artifactId>
+	<packaging>jar</packaging>
+	<name>Kuali Skin for Maven</name>
+	<version>1.0.0</version>
+	<description></description>
+	<url></url>
+	<organization>
+		<name>The Kuali Foundation</name>
+		<url>http://kuali.org</url>
+	</organization>
+
+	<licenses>
+		<license>
+			<name>The Kuali Foundation Educational Community License 2.0</name>
+			<url>http://www.opensource.org/licenses/ecl2.txt</url>
+			<distribution>manual</distribution>
+		</license>
+	</licenses>
+
+    <developers>
+      <developer>
+        <id>leo</id>
+        <name>Leo Przybylski</name>
+        <email>leo@rsmart.com</email>
+        <url>http://kualigan.blogspot.com</url>
+        <organization>rsmart</organization>
+        <organizationUrl>http://www.rsmart.com</organizationUrl>
+        <roles>
+          <role>developer</role>
+        </roles>
+        <timezone>-7</timezone>
+        <properties>
+          <picUrl>http://www.gravatar.com/avatar/6be04114e185b6fa626a0ee530db34e4.png</picUrl>
+        </properties>
+      </developer>
+    </developers>
+
+    <scm>
+      <connection>scm:git:git://github.com/r351574nc3/maven-kuali-skin.git</connection>
+      <developerConnection>scm:git:git://github.com/r351574nc3/maven-kuali-skin.git</developerConnection>
+      <url>http://www.github.com/r351574nc3/maven-kuali-skin</url>
+    </scm>
+    
+    <distributionManagement>
+      <site>
+        <id>github-project-site</id>
+        <url>gitsite:git@github.com/r351574nc3/maven-kuali-skin</url>
+      </site>
+    </distributionManagement>
+</project>
