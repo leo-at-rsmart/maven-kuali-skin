@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="http://www.kuali.org/sites/all/themes/kualiv1/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+  <title>Page not found | www.kuali.org</title>
+  <link href='https://fonts.googleapis.com/css?family=EB+Garamond|Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
+  <style type="text/css" media="all">@import url("http://www.kuali.org/modules/system/system.base.css?lu0li7");
+@import url("http://www.kuali.org/modules/system/system.menus.css?lu0li7");
+@import url("http://www.kuali.org/modules/system/system.messages.css?lu0li7");
+@import url("http://www.kuali.org/modules/system/system.theme.css?lu0li7");</style>
+<style type="text/css" media="all">@import url("http://www.kuali.org/modules/comment/comment.css?lu0li7");
+@import url("http://www.kuali.org/sites/all/modules/date/date_api/date.css?lu0li7");
+@import url("http://www.kuali.org/sites/all/modules/date/date_popup/themes/datepicker.1.7.css?lu0li7");
+@import url("http://www.kuali.org/modules/field/theme/field.css?lu0li7");
+@import url("http://www.kuali.org/modules/node/node.css?lu0li7");
+@import url("http://www.kuali.org/modules/search/search.css?lu0li7");
+@import url("http://www.kuali.org/modules/user/user.css?lu0li7");
+@import url("http://www.kuali.org/sites/all/modules/views/css/views.css?lu0li7");</style>
+<style type="text/css" media="all">@import url("http://www.kuali.org/sites/all/modules/ckeditor/ckeditor.css?lu0li7");
+@import url("http://www.kuali.org/sites/all/modules/ctools/css/ctools.css?lu0li7");</style>
+<style type="text/css" media="all">@import url("http://www.kuali.org/sites/all/themes/kualiv1/css/reset.css?lu0li7");
+@import url("http://www.kuali.org/sites/all/themes/kualiv1/css/layout.css?lu0li7");</style>
+
+<!--[if lte IE 7]>
+<style type="text/css" media="all">@import url("http://www.kuali.org/sites/all/themes/kualiv1/css/ie7.css?lu0li7");</style>
+<![endif]-->
+
+<!--[if lte IE 6]>
+<style type="text/css" media="all">@import url("http://www.kuali.org/sites/all/themes/kualiv1/css/ie6.css?lu0li7");</style>
+<![endif]-->
+  <script type="text/javascript" src="http://www.kuali.org/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="http://www.kuali.org/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="http://www.kuali.org/misc/drupal.js?lu0li7"></script>
+<script type="text/javascript" src="http://www.kuali.org/sites/all/modules/google_analytics/googleanalytics.js?lu0li7"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-26661549-1"]);_gaq.push(["_setDomainName", ".kuali.org"]);_gaq.push(["_trackPageview", "/404.html?page=" + document.location.pathname + document.location.search + "&from=" + document.referrer]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.kuali.org/sites/all/themes/kualiv1/js/layout.js?lu0li7"></script>
+<script type="text/javascript" src="http://www.kuali.org/sites/all/modules/views/js/jquery.ui.dialog.patch.js?lu0li7"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"kualiv1","theme_token":"9zn-TxcGDd355CFQLIbBLOK8qgqTtT60G0oz22e3fgg","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/themes\/kualiv1\/js\/layout.js":1,"sites\/all\/modules\/views\/js\/jquery.ui.dialog.patch.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/ckeditor.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/themes\/kualiv1\/css\/reset.css":1,"sites\/all\/themes\/kualiv1\/css\/layout.css":1,"sites\/all\/themes\/kualiv1\/css\/ie7.css":1,"sites\/all\/themes\/kualiv1\/css\/ie6.css":1}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip","trackDomainMode":"1"}});
+//--><!]]>
+</script>
+  <!--script type="text/javascript" src="http://use.typekit.com/doh8jfp.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script -->
+</head>
+<body class="html not-front not-logged-in no-sidebars page-images page-images-download-iconpng section-images" >
+  <div id="skip-link">
+    <a href="#main-menu" class="element-invisible element-focusable">Jump to Navigation</a>
+  </div>
+    <div id="wrapper" class="generic-page">   <!-- header -->
+	<div class="header clearfix">
+		<div class="drawer">
+			<div class="inner">
+				<div class="drawer-content">
+									</div>
+			</div>
+		</div>
+		<div class="inner">
+				            <div class="logo">
+	              <a href="/" title="Home" rel="home">Kuali Foundation</a>
+	            </div>
+	          	          
+			<div class="quick-nav">
+				  <div class="region region-quicknav">
+    <div id="block-search-form" class="block block-search first last odd">
+
+      
+  <div class="content">
+    <form action="/images/download-icon.png" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-5BUXrFfO8SbAxj6AUZL3DCU4kKWVjxwz-LUT3xT6qHc" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>  </div>
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+			</div>
+		</div>
+	</div>   <!-- /header -->
+	<div class="prime clearfix">   <!-- prime -->
+		<div class="inner">
+			<div class="main-nav clearfix">
+				  <div class="region region-topnav">
+    <div id="block-block-6" class="block block-block first odd">
+
+      
+  <div class="content">
+    <div class="upcoming-event">
+<a href="http://kuali.org/kd2011/" title="Nov 14-16, Indianapolis - Kuali Days">
+  <h4>Kuali Days</h4>
+  <p class="details">Nov 14-16, Indianapolis</p>
+</a>
+</div>
+  </div>
+
+</div><!-- /.block -->
+<div id="block-menu-block-4" class="block block-menu-block last even">
+
+      
+  <div class="content">
+    <div class="menu-block-wrapper menu-block-4 menu-name-main-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf menu-mlid-198"><a href="/">Home</a></li>
+<li class="expanded menu-mlid-425"><a href="/software">Software</a><ul class="menu"><li class="first leaf has-children menu-mlid-542"><a href="/rice">Kuali Rice</a></li>
+<li class="leaf has-children menu-mlid-426"><a href="/kfs" title="Kuali Financial System (KFS)">Kuali Financial System</a></li>
+<li class="leaf has-children menu-mlid-543"><a href="/kc" title="Kuali Coeus for Research">Kuali Coeus</a></li>
+<li class="leaf has-children menu-mlid-548"><a href="/mobility">Kuali Mobility</a></li>
+<li class="leaf has-children menu-mlid-545"><a href="/OLE">Kuali Online Library Env</a></li>
+<li class="leaf has-children menu-mlid-547"><a href="/KPME">Kuali People Mgmt</a></li>
+<li class="leaf has-children menu-mlid-546"><a href="/ready">Kuali Ready</a></li>
+<li class="last leaf has-children menu-mlid-544"><a href="/ks">Kuali Student</a></li>
+</ul></li>
+<li class="expanded menu-mlid-761"><a href="/get-involved">Get Involved</a><ul class="menu"><li class="first leaf menu-mlid-627"><a href="/membership">Join Kuali</a></li>
+<li class="leaf menu-mlid-767"><a href="/become-partner">Become a Partner</a></li>
+<li class="leaf menu-mlid-792"><a href="/contribute">Contribute Your Code</a></li>
+<li class="leaf menu-mlid-769"><a href="/jobs">Find a Job</a></li>
+<li class="last leaf menu-mlid-947"><a href="/kd">Kuali Days</a></li>
+</ul></li>
+<li class="expanded menu-mlid-626"><a href="/Community">Community</a><ul class="menu"><li class="first leaf menu-mlid-639"><a href="/Community" title="">Overview</a></li>
+<li class="leaf menu-mlid-636"><a href="/community-values">Kuali Values</a></li>
+<li class="leaf menu-mlid-630"><a href="/Members">Members</a></li>
+<li class="leaf menu-mlid-629"><a href="/about/partners">Partners</a></li>
+<li class="last leaf has-children menu-mlid-804"><a href="/adopter-stories">Adopter-Stories</a></li>
+</ul></li>
+<li class="expanded menu-mlid-552"><a href="/resources">Resources</a></li>
+<li class="last expanded menu-mlid-696"><a href="/support">Support</a><ul class="menu"><li class="first leaf menu-mlid-768"><a href="/gethelp">Get Help</a></li>
+<li class="leaf has-children menu-mlid-764"><a href="/commercial-affiliate-interests">Commercial Affiliate Program</a></li>
+<li class="leaf menu-mlid-628"><a href="/foundation-staff">Foundation Staff</a></li>
+<li class="last leaf menu-mlid-773"><a href="/kca-support">Commercial Support</a></li>
+</ul></li>
+</ul></div>
+  </div>
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+			</div>
+			
+			
+			<div class="message">   <!-- primary message -->
+				<div class="breadcrumb">
+					<div class="breadcrumb"> <a href='/' title='Kuali.org'>Kuali.org</a><a href="/images">images</a><span class='active'>download icon.png</span></div>				</div>
+				<h1>Page not found</h1>
+			</div>   <!-- /primary message -->
+			<div class="sidenav">
+							</div>
+					</div>
+	</div>   <!-- /prime -->
+	
+	
+	<div class="midnav clearfix">   <!-- midpage navigation -->
+		<div class="inner">
+		    		</div>
+	</div>   <!-- /midpage navigation -->
+	<div class="main-content clearfix without-sidebar">   <!-- main content -->
+		<div class="inner">
+						<div class="left-col">
+				  <div class="region region-content">
+    <div id="block-system-main" class="block block-system first last odd">
+
+      
+  <div class="content">
+    The requested page "/images/download-icon.png" could not be found.  </div>
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+			</div>
+			<div class="right-col">
+							</div>
+		</div>
+	</div>   <!-- /main content -->
+	<div class="feedback clearfix">   <!-- feedback bar -->
+		<div class="inner">
+			  <div class="region region-footertop">
+    <div id="block-block-1" class="block block-block first last odd">
+
+      
+  <div class="content">
+    <p class="contact">Having trouble finding something? <a href="/contact">Let us know.</a></p>
+<p class="social"><a href="http://twitter.com/#!/kuali_feeds">Talk to us on <strong>Twitter</strong></a> <a href="https://www.facebook.com/pages/Kuali-Foundation/109440207855">Friend us on <strong>Facebook</strong></a></p>
+  </div>
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+		</div>
+	</div>   <!-- /feedback bar -->
+	<div class="footer">   <!-- footer -->
+		<div class="inner">
+			  <div class="region region-footer">
+    <div id="block-block-3" class="block block-block first last odd">
+
+      
+  <div class="content">
+    <p class="copyright">Copyright © Kuali Foundation 2011</p>
+  </div>
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+		</div>
+	</div>   <!-- /footer -->
+</div>   <!-- /wrapper -->  </body>
+</html>
