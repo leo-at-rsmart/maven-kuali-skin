@@ -13,15 +13,15 @@
 	<name>Kuali Skin for Maven</name>
 	<version>1.0.0</version>
 	<description></description>
-	<url></url>
+	<url>http://r351574nc3.github.com/maven-kuali-skin</url>
 	<organization>
 		<name>The Kuali Foundation</name>
-		<url>http://kuali.org</url>
+		<url>http://kualigan.blogspot.com</url>
 	</organization>
 
 	<licenses>
 		<license>
-			<name>The Kuali Foundation Educational Community License 2.0</name>
+			<name>Leo Przybylski Community License 2.0</name>
 			<url>http://www.opensource.org/licenses/ecl2.txt</url>
 			<distribution>manual</distribution>
 		</license>
