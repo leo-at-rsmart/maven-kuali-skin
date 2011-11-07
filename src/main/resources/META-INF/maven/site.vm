@@ -505,7 +505,9 @@ width: 100%;
 </script>
 <script type="text/javascript">
 if (window.jstiming) window.jstiming.load.tick('headEnd');
-</script></head>
+</script>
+#googleAnalytics("UA-16006964-1")
+</head>
 <body class='html not-front not-logged-in no-sidebars page-node page-node- page-node-236 node-type-subpage stalker'>
 <div id='skip-link'>
 <a class='element-invisible element-focusable' href='#main-menu'>Jump to Navigation</a>
@@ -623,11 +625,11 @@ if (window.jstiming) window.jstiming.load.tick('headEnd');
 <div class='block block-block first last odd' id='block-block-8'>
 <div class='content'>
 <ul>
-<li><a href='http://www.kuali.org/contact'>Contact</a></li>
-<li><a href='http://www.kuali.org/rice/faq'>FAQ</a></li>
-<li><a href='http://www.kuali.org/news/rice'>News</a></li>
-<li><a href='http://www.kuali.org/resources/documentation'>Documentation</a></li>
-<li><a href='http://www.kuali.org/rice/download'>All Versions</a></li>
+<li><a href="leo.html">Leo</a></li>
+<li><a href="http://kualigan.blogspot.com">Kualigan</a></li>
+<li><a href="team-list.html">Team</a></li>
+<li><a href="documentation">Documentation</a></li>
+<li><a href="https://github.com/r351574nc3/">All Versions</a></li>
 </ul>
 </div>
 </div><!-- /.block -->
