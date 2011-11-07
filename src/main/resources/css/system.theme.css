@@ -136,7 +136,7 @@ input.form-radio {
   text-align: right; /* LTR */
 }
 .more-help-link a {
-  background: url(../../misc/help.png) 0 50% no-repeat; /* LTR */
+  background: url(../../images/help.png) 0 50% no-repeat; /* LTR */
   padding: 1px 0 1px 20px; /* LTR */
 }
 
@@ -174,11 +174,11 @@ input.form-radio {
  * @see collapse.js
  */
 html.js fieldset.collapsible .fieldset-legend {
-  background: url(../../misc/menu-expanded.png) 5px 65% no-repeat; /* LTR */
+  background: url(../../images/menu-expanded.png) 5px 65% no-repeat; /* LTR */
   padding-left: 15px; /* LTR */
 }
 html.js fieldset.collapsed .fieldset-legend {
-  background-image: url(../../misc/menu-collapsed.png); /* LTR */
+  background-image: url(../../images/menu-collapsed.png); /* LTR */
   background-position: 5px 50%; /* LTR */
 }
 .fieldset-legend span.summary {
@@ -235,5 +235,5 @@ th.checkbox {
   border-radius: 3px;
 }
 .progress .filled {
-  background: #0072b9 url(../../misc/progress.gif);
+  background: #0072b9 url(../../images/progress.gif);
 }

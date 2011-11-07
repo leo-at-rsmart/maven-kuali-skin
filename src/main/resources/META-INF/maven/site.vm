@@ -423,30 +423,6 @@
 <style media="all" type="text/css">@import url("/css/reset.css");
 @import url("/css/layout.css");</style>
 <link href="/css/shCore.css" rel="stylesheet" type="text/css"/> 
-<!--
-<link href='http://www.u.arizona.edu/~przybyls/css/ajs.css' rel='stylesheet' type='text/css'/> 
-<link href='http://www.u.arizona.edu/~przybyls/css/jira-global.css' rel='stylesheet' type='text/css'/> 
-<link href='http://www.u.arizona.edu/~przybyls/css/global.css' rel='stylesheet' type='text/css'/> 
--->
-<link href="/css/global-static.css" rel="stylesheet" type="text/css"/> 
-<link href="/css/shThemeDefault.css" rel="stylesheet" type="text/css"/> 
-<script src="/js/shCore.js" type="text/javascript"/> 
-<script src="/js/shBrushCss.js" type="text/javascript"/> 
-<script src="/js/shBrushJava.js" type="text/javascript"/> 
-<script src="/js/shBrushJScript.js" type="text/javascript"/> 
-<script src="/js/shBrushSql.js" type="text/javascript"/> 
-<script src="/js/shBrushPlain.js" type="text/javascript"/> 
-<script src="/js/shBrushXml.js" type="text/javascript"/> 
-<script language="javascript"> 
-SyntaxHighlighter.config.bloggerMode = true;
-SyntaxHighlighter.config.clipboardSwf = '/js/clipboard.swf';
-SyntaxHighlighter.all();
-</script> 
-
-		<!--[if IE 6]>
-			<link type="text/css" rel="stylesheet" media="all" href="http://www.kuali.org/sites/all/themes/kuali/fix-ie6.css" />		<![endif]--> 
-		<!--[if lt IE 7]>
-			<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/kuali/fix-ie7.css" />		<![endif]--> 
 <style>
 .code {
     white-space : pre;
@@ -484,17 +460,6 @@ z-index: 100;
 width: 100%;
 }
 </style>
-<script type="text/javascript">var contextPath = '';</script>
-<script language="javascript" src="/js/ajs.js"/>
-<script language="javascript" src="/js/jira-global.js"/>
-<script language="javascript" src="/js/jquery-fancybox.js"/>
-<script language="javascript" src="/js/calendar.js"/>
-<script language="javascript" src="/js/viewissue.js"/>
-<script language="javascript" src="/js/autocomplete.js"/>
-<script language="javascript" src="/js/key-commands.js"/>
-<script language="javascript" src="/js/header.js"/>
-<script language="javascript" src="/js/set-focus.js"/>
-    #googleAnalytics( $decoration.googleAnalyticsAccountId )
 </head>
 <body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-236 node-type-subpage stalker">
   <div id="skip-link">
