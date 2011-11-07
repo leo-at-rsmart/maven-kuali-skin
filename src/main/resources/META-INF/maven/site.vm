@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 #macro ( link $href $name $target $img $position $alt $border $width $height )
   #set ( $linkTitle = ' title="' + $name + '"' )
@@ -151,9 +150,9 @@
   #set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
 ##
     #if ( $alignedFileName == $currentItemHref )
-        #set ( $collapes = "leaf menu-mlid-680" )
+        #set ( $collapse = "leaf active-trail active menu-mlid-680" )
     #else
-        #set ( $collapes = "leaf menu-mlid-680" )
+        #set ( $collapse = "leaf menu-mlid-680" )
     #end
     <li class="$collapse">
       #link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height )
@@ -161,15 +160,15 @@
 #end
 ##
 #macro ( mainMenu $menus )
-  #foreach( $menu in $menus )
   <ul class="menu">
+  #foreach( $menu in $menus )
     #if ( $menu.name )
       #foreach( $item in $menu.items )
         #menuItem( $item )
       #end
     #end
-  </ul>
   #end
+</ul>
 #end
 ##
 #macro ( copyright )

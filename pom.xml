@@ -11,7 +11,7 @@
 	<artifactId>maven-kuali-skin</artifactId>
 	<packaging>jar</packaging>
 	<name>Kuali Skin for Maven</name>
-	<version>1.0.0</version>
+	<version>0.0.1</version>
 	<description></description>
 	<url>http://r351574nc3.github.com/maven-kuali-skin</url>
 	<organization>
