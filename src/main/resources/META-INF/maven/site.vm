@@ -465,6 +465,32 @@
 <html version="XHTML+RDFa 1.0" xml:lang="en"
       xmlns="http://www.w3.org/1999/xhtml" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 <head profile="http://www.w3.org/1999/xhtml/vocab">
+    <link rel="stylesheet" href="$relativePath/css/print.css" type="text/css" media="print" />
+#foreach( $author in $authors )
+      <meta name="author" content="$author" />
+#end
+#if ( $dateCreation )
+    <meta name="Date-Creation-yyyymmdd" content="$dateCreation" />
+#end
+#if ( $dateRevision )
+    <meta name="Date-Revision-yyyymmdd" content="$dateRevision" />
+#end
+#if ( $locale )
+    <meta http-equiv="Content-Language" content="$locale.language" />
+#end
+    #if ( $decoration.body.head )
+      #foreach( $item in $decoration.body.head.getChildren() )
+        ## Workaround for DOXIA-150 due to a non-desired behaviour in p-u
+        ## @see org.codehaus.plexus.util.xml.Xpp3Dom#toString()
+        ## @see org.codehaus.plexus.util.xml.Xpp3Dom#toUnescapedString()
+        #set ( $documentHeader = '<?xml version="1.0" encoding="UTF-8"?>' )
+        #if ( $item.name == "script" )
+          $StringUtils.replace( $item.toUnescapedString(), $documentHeader, "" )
+        #else
+          $StringUtils.replace( $item.toString(), $documentHeader, "" )
+        #end
+      #end
+    #end
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <meta about="/commercial-affiliate-interests" content="0" datatype="xsd:integer" property="sioc:num_replies"/>
 <link href="http://www.kuali.org/sites/all/themes/kualiv1/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
@@ -472,8 +498,7 @@
 <link href="/commercial-affiliate-interests" rel="canonical"/>
 
 <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/> 
-		<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/> 
-  <style media="all" type="text/css">@import url("/css/system.base.css");
+<style media="all" type="text/css">@import url("/css/system.base.css");
 @import url("/css/system.menus.css");
 @import url("/css/system.messages.css");
 @import url("/css/system.theme.css");</style>
@@ -563,7 +588,8 @@ width: 100%;
 <script language="javascript" src="/js/key-commands.js"/>
 <script language="javascript" src="/js/header.js"/>
 <script language="javascript" src="/js/set-focus.js"/>
-  </head>
+    #googleAnalytics( $decoration.googleAnalyticsAccountId )
+</head>
 <body class='html not-front not-logged-in no-sidebars page-node page-node- page-node-236 node-type-subpage stalker'>
   <div id='skip-link'>
     <a class='element-invisible element-focusable' href='#main-menu'>Jump to Navigation</a>
@@ -741,9 +767,10 @@ width: 100%;
 		<div class='inner'>
 						<div class='left-col'>
 				<div class='field field-name-body field-type-text-with-summary field-label-hidden'><div class='field-items'><div class='field-item even' property='content:encoded'>
+        $bodyContent
 </div>
 
-</div></div></div>			</div>
+</div></div>			</div>
 							<div class='right-col'>
 										<div class='field field-name-field-sidebar field-type-text-long field-label-hidden'><div class='field-items'><div class='field-item even'>
 
@@ -770,32 +797,25 @@ width: 100%;
     <div class='block block-block first odd' id='block-block-3'>
 
       
-  <div class='content'>
-    <p class='copyright'>Copyright &#169; Kuali Foundation 2011</p>
-<p><a class='feed-icon' href='/feeds/posts/default?alt=rss'><img alt='Syndicate content' class='rss' height='16' src='http://www.kuali.org/misc/feed.png' title='Kualigan Insider Feed Channel' width='16'/></a></p>
- 
+  <div class="content">
+      #if($decoration.body.footer)
+        $decoration.body.footer
+      #else
+        Copyright &#169;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )
+      #end
   </div>
 
 </div><!-- /.block -->
-<div class='block block-menu last even' id='block-menu-menu-footer-menu'>
+<div class="block block-menu last even" id="block-menu-menu-footer-menu">
 
-        <h2 class='block-title'>Footer Menu</h2>
+        <h2 class="block-title">Footer Menu</h2>
     
-  <div class='content'>
+  <div class="content">
  </div>
 
 </div><!-- /.block -->
   </div><!-- /.region -->
 		</div>
 	</div>   <!-- /footer -->
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type='text/javascript'>
-try {
-var pageTracker = _gat._getTracker('UA-16006964-1');
-pageTracker._trackPageview();
-} catch(err) {}</script>
 	</body> 
 </html>
