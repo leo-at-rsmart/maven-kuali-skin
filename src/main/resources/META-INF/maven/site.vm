@@ -735,8 +735,8 @@ width: 100%;
     <div class='block block-block first odd' id='block-block-5'>
 
       
-  <div class='content'>
-    <!--<p class='highlight'><span><a href='/download'>Download</a><br/><a href='/test-drives'>Test Drive</a></span></p> -->
+  <div class="content">
+    <p class="highlight"><span><a href="https://github.com/r351574nc3/lbcopy/tarball/master">Download</a><br/><a href="http://www.github.com/r351574nc3/">GitHub</a></span></p>
   </div>
 
 </div><!-- /.block -->
@@ -801,7 +801,8 @@ width: 100%;
       #if($decoration.body.footer)
         $decoration.body.footer
       #else
-        Copyright &#169;#copyright()All Rights Reserved.#publishDate( "bottom" $decoration.publishDate $decoration.version )
+        Copyright &#169;#copyright()All Rights Reserved.#publishDate(
+        "bottom" $decoration.publishDate $decoration.version ) #poweredByLogo( $decoration.poweredBy )
       #end
   </div>
 
