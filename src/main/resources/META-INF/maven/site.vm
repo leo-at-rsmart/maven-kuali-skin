@@ -150,116 +150,25 @@
   #set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
   #set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
 ##
-  #if ( $item && $item.items && $item.items.size() > 0 )
-    #if ( $item.collapse == false )
-      #set ( $collapse = "expanded" )
-    #else
-      ## By default collapsed
-      #set ( $collapse = "collapsed" )
-    #end
-##
-    #set ( $display = false )
-    #displayTree( $display $item )
-##
-    #if ( $alignedFileName == $currentItemHref || $display )
-      #set ( $collapse = "expanded" )
-    #end
-  #end
-  <li class="$collapse">
-  #if ( $item.img )
-    #if ( $item.position == "left" )
-      #if ( $alignedFileName == $currentItemHref )
-        <strong>#image($item.img $item.alt $item.border $item.width $item.height) $item.name</strong>
-      #else
-        #link($currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height)
-      #end
-    #else
-      #if ( $alignedFileName == $currentItemHref )
-        <strong>$item.name #image($item.img $item.alt $item.border $item.width $item.height)</strong>
-      #else
-        #link($currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height)
-      #end
-    #end
-  #else
     #if ( $alignedFileName == $currentItemHref )
-      <strong>$item.name</strong>
+        #set ( $collapes = "leaf active-trail active menu-mlid-680" )
     #else
+        #set ( $collapes = "leaf menu-mlid-680" )
+    #end
+    <li class="$collapse">
       #link( $currentItemHref $item.name $item.target $item.img $item.position $item.alt $item.border $item.width $item.height )
-    #end
-  #end
-  #if ( $item && $item.items && $item.items.size() > 0 )
-    #if ( $collapse == "expanded" )
-      <ul>
-        #foreach( $subitem in $item.items )
-          #menuItem( $subitem )
-        #end
-      </ul>
-    #end
-  #end
   </li>
 #end
 ##
 #macro ( mainMenu $menus )
   #foreach( $menu in $menus )
+  <ul class="menu">
     #if ( $menu.name )
-      #if ( $menu.img )
-        #if( $menu.position )
-          #set ( $position = $menu.position )
-        #else
-          #set ( $position = "left" )
-        #end
-##
-        #if ( ! ( $menu.img.toLowerCase().startsWith("http:/") || $menu.img.toLowerCase().startsWith("https:/") ||
-                $menu.img.toLowerCase().startsWith("ftp:/") || $menu.img.toLowerCase().startsWith("mailto:/") ||
-                $menu.img.toLowerCase().startsWith("file:/") || ($menu.img.toLowerCase().indexOf("://") != -1) ) )
-          #set ( $src = $PathTool.calculateLink( $menu.img, $relativePath ) )
-          #set ( $src = $src.replaceAll( '\\', '/' ) )
-          #set ( $src = ' src="' + $src + '"' )
-        #else
-          #set ( $src = ' src="' + $menu.img + '"' )
-        #end
-##
-        #if( $menu.alt )
-          #set ( $alt = ' alt="' + $menu.alt + '"' )
-        #else
-          #set ( $alt = ' alt="' + $menu.name + '"' )
-        #end
-##
-        #if( $menu.border )
-          #set ( $border = ' border="' + $menu.border + '"' )
-        #else
-          #set ( $border = ' border="0"' )
-        #end
-##
-        #if( $menu.width )
-          #set ( $width = ' width="' + $menu.width + '"' )
-        #else
-          #set ( $width = "" )
-        #end
-        #if( $menu.height )
-          #set ( $height = ' height="' + $menu.height + '"' )
-        #else
-          #set ( $height = "" )
-        #end
-##
-        #set ( $img = '<img class="imageLink"' + $src + $alt + $border + $width + $height + "/>" )
-##
-        #if ( $position == "left" )
-        <h5>$img $menu.name</h5>
-        #else
-        <h5>$menu.name $img</h5>
-        #end
-      #else
-       <h5>$menu.name</h5>
-      #end
-    #end
-    #if ( $menu.items && $menu.items.size() > 0 )
-    <ul>
       #foreach( $item in $menu.items )
         #menuItem( $item )
       #end
-    </ul>
     #end
+  </ul>
   #end
 #end
 ##
@@ -465,7 +374,6 @@
 <html version="XHTML+RDFa 1.0" xml:lang="en"
       xmlns="http://www.w3.org/1999/xhtml" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 <head profile="http://www.w3.org/1999/xhtml/vocab">
-    <link rel="stylesheet" href="$relativePath/css/print.css" type="text/css" media="print" />
 #foreach( $author in $authors )
       <meta name="author" content="$author" />
 #end
@@ -521,9 +429,7 @@
 <link href='http://www.u.arizona.edu/~przybyls/css/global.css' rel='stylesheet' type='text/css'/> 
 -->
 <link href="/css/global-static.css" rel="stylesheet" type="text/css"/> 
-<!--
 <link href="/css/shThemeDefault.css" rel="stylesheet" type="text/css"/> 
-<script src="/js/jquery.js" type="text/javascript"/> 
 <script src="/js/shCore.js" type="text/javascript"/> 
 <script src="/js/shBrushCss.js" type="text/javascript"/> 
 <script src="/js/shBrushJava.js" type="text/javascript"/> 
@@ -536,7 +442,6 @@ SyntaxHighlighter.config.bloggerMode = true;
 SyntaxHighlighter.config.clipboardSwf = '/js/clipboard.swf';
 SyntaxHighlighter.all();
 </script> 
--->
 
 		<!--[if IE 6]>
 			<link type="text/css" rel="stylesheet" media="all" href="http://www.kuali.org/sites/all/themes/kuali/fix-ie6.css" />		<![endif]--> 
@@ -591,49 +496,49 @@ width: 100%;
 <script language="javascript" src="/js/set-focus.js"/>
     #googleAnalytics( $decoration.googleAnalyticsAccountId )
 </head>
-<body class='html not-front not-logged-in no-sidebars page-node page-node- page-node-236 node-type-subpage stalker'>
-  <div id='skip-link'>
-    <a class='element-invisible element-focusable' href='#main-menu'>Jump to Navigation</a>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-236 node-type-subpage stalker">
+  <div id="skip-link">
+    <a class="element-invisible element-focusable" href="#main-menu">Jump to Navigation</a>
   </div>
-    <div class='subpage' id='wrapper'>   <!-- header -->
-	<div class='header clearfix'>
-		<div class='drawer'>
-			<div class='inner'>
-				<div class='drawer-content'>
+    <div class="subpage" id="wrapper">   <!-- header -->
+	<div class="header clearfix">
+		<div class="drawer">
+			<div class="inner">
+				<div class="drawer-content">
 									</div>
 			</div>
 		</div>
-		<div class='inner'>
-				            <div class='logo'>
+		<div class="inner">
+				            <div class="logo">
                               #banner( $decoration.bannerLeft "bannerLeft" )
 	                        </div>
 	          	          
-			<div class='quick-nav'>
-				  <div class='region region-quicknav'>
-    <div class='block block-search first odd' id='block-search-form'>
+			<div class="quick-nav">
+				  <div class="region region-quicknav">
+    <div class="block block-search first odd" id="block-search-form">
 
       
-  <div class='content'>
-    <form accept-charset='UTF-8' action='/rice' id='search-block-form' method='post'><div><div class='container-inline'>
-      <h2 class='element-invisible'>Search form</h2>
-    <div class='form-item form-type-textfield form-item-search-block-form'>
-  <label class='element-invisible' for='edit-search-block-form--2'>Search </label>
- <input class='form-text' id='edit-search-block-form--2' maxlength='128' name='search_block_form' size='15' title='Enter the terms you wish to search for.' type='text' value=''/>
+  <div class="content">
+    <form accept-charset="UTF-8" action="/rice" id="search-block-form" method="post"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input class="form-text" id="edit-search-block-form--2" maxlength="128" name="search_block_form" size="15" title="Enter the terms you wish to search for." type="text" value=""/>
 </div>
-<div class='form-actions form-wrapper' id='edit-actions'><input class='form-submit' id='edit-submit' name='op' type='submit' value='Search'/></div><input name='form_build_id' type='hidden' value='form-oYDfSnoGf9ckKjHKZDmDDndjK85_Cn6RtBS3h5DhWm4'/>
-<input name='form_id' type='hidden' value='search_block_form'/>
+<div class="form-actions form-wrapper" id="edit-actions"><input class="form-submit" id="edit-submit" name="op" type="submit" value="Search"/></div><input name="form_build_id" type="hidden" value="form-oYDfSnoGf9ckKjHKZDmDDndjK85_Cn6RtBS3h5DhWm4"/>
+<input name="form_id" type="hidden" value="search_block_form"/>
 </div>
 </div></form>  </div></div>
 
 </div><!-- /.block -->
-<div class='block block-menu last even' id='block-menu-menu-quick-links'>
+<div class="block block-menu last even" id="block-menu-menu-quick-links">
 
-        <h2 class='block-title'>Quick Links</h2>
+        <h2 class="block-title">Quick Links</h2>
     
-  <div class='content'>
-    <ul class='menu'><li class='first leaf'><a href='/about' title='About Kuali'>About</a></li>
-<li class='leaf'><a href='http://kuali.org/kis/' title=''>Find People</a></li>
-<li class='last leaf'><a href='/contact' title='Contact Kuali'>Contact</a></li>
+  <div class="content">
+    <ul class="menu"><li class="first leaf"><a href="/about" title="About Kuali">About</a></li>
+<li class="leaf"><a href="http://kuali.org/kis/" title="">Find People</a></li>
+<li class="last leaf"><a href="/contact" title="Contact Kuali">Contact</a></li>
 </ul>  </div>
 
 </div><!-- /.block -->
@@ -642,54 +547,54 @@ width: 100%;
 		</div>
 	</div>   <!-- /header -->
 
-	<div class='prime clearfix'>   <!-- prime -->
-		<div class='inner'>
-			<div class='main-nav clearfix'>
-				  <div class='region region-topnav'>
-    <div class='block block-block first odd' id='block-block-6'>
+	<div class="prime clearfix">   <!-- prime -->
+		<div class="inner">
+			<div class="main-nav clearfix">
+				  <div class="region region-topnav">
+    <div class="block block-block first odd" id="block-block-6">
 
       
-  <div class='content'>
-    <div class='upcoming-event'>
-<a href='http://kuali.org/kd2011/' title='Nov 14-16, Indianapolis - Kuali Days'>
+  <div class="content">
+    <div class="upcoming-event">
+<a href="http://kuali.org/kd2011/" title="Nov 14-16, Indianapolis - Kuali Days">
   <h4>Kuali Days</h4>
-  <p class='details'>Nov 14-16, Indianapolis</p>
+  <p class="details">Nov 14-16, Indianapolis</p>
 </a>
 </div>
   </div>
 </div><!-- /.block -->
-<div class='block block-menu-block last even' id='block-menu-block-4'>
+<div class="block block-menu-block last even" id="block-menu-block-4">
 
       
-  <div class='content'>
-    <div class='menu-block-wrapper menu-block-4 menu-name-main-menu parent-mlid-0 menu-level-1'>
-  <ul class='menu'><li class='first leaf menu-mlid-198'><a href='/'>Home</a></li>
-<li class='expanded active-trail menu-mlid-425'><a class='active-trail' href='http://www.kuali.org/software'>Software</a><ul class='menu'><li class='first leaf has-children active-trail active menu-mlid-542'><a class='active-trail active' href='/rice'>Kuali Rice</a></li>
-<li class='leaf has-children menu-mlid-426'><a href='/kfs' title='Kuali Financial System (KFS)'>Kuali Financial System</a></li>
-<li class='leaf has-children menu-mlid-543'><a href='http://www.kuali.org/kc' title='Kuali Coeus for Research'>Kuali Coeus</a></li>
-<li class='leaf has-children menu-mlid-548'><a href='http://www.kuali.org/mobility'>Kuali Mobility</a></li>
-<li class='leaf has-children menu-mlid-545'><a href='http://www.kuali.org/OLE'>Kuali Online Library Env</a></li>
-<li class='leaf has-children menu-mlid-547'><a href='http://www.kuali.org/KPME'>Kuali People Mgmt</a></li>
-<li class='leaf has-children menu-mlid-546'><a href='http://www.kuali.org/ready'>Kuali Ready</a></li>
-<li class='last leaf has-children menu-mlid-544'><a href='http://www.kuali.org/ks'>Kuali Student</a></li>
+  <div class="content">
+    <div class="menu-block-wrapper menu-block-4 menu-name-main-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf menu-mlid-198"><a href="/">Home</a></li>
+<li class="expanded active-trail menu-mlid-425"><a class="active-trail" href="http://www.kuali.org/software">Software</a><ul class="menu"><li class="first leaf has-children active-trail active menu-mlid-542"><a class="active-trail active" href="/rice">Kuali Rice</a></li>
+<li class="leaf has-children menu-mlid-426"><a href="/kfs" title="Kuali Financial System (KFS)">Kuali Financial System</a></li>
+<li class="leaf has-children menu-mlid-543"><a href="http://www.kuali.org/kc" title="Kuali Coeus for Research">Kuali Coeus</a></li>
+<li class="leaf has-children menu-mlid-548"><a href="http://www.kuali.org/mobility">Kuali Mobility</a></li>
+<li class="leaf has-children menu-mlid-545"><a href="http://www.kuali.org/OLE">Kuali Online Library Env</a></li>
+<li class="leaf has-children menu-mlid-547"><a href="http://www.kuali.org/KPME">Kuali People Mgmt</a></li>
+<li class="leaf has-children menu-mlid-546"><a href="http://www.kuali.org/ready">Kuali Ready</a></li>
+<li class="last leaf has-children menu-mlid-544"><a href="http://www.kuali.org/ks">Kuali Student</a></li>
 </ul></li>
-<li class='expanded menu-mlid-761'><a href='http://www.kuali.org/get-involved'>Get Involved</a><ul class='menu'><li class='first leaf menu-mlid-627'><a href='/membership'>Join Kuali</a></li>
-<li class='leaf menu-mlid-767'><a href='http://www.kuali.org/become-partner'>Become a Partner</a></li>
-<li class='leaf menu-mlid-792'><a href='http://www.kuali.org/contribute'>Contribute Your Code</a></li>
-<li class='leaf menu-mlid-769'><a href='http://www.kuali.org/jobs'>Find a Job</a></li>
-<li class='last leaf menu-mlid-947'><a href='http://www.kuali.org/kd'>Kuali Days</a></li>
+<li class="expanded menu-mlid-761"><a href="http://www.kuali.org/get-involved">Get Involved</a><ul class="menu"><li class="first leaf menu-mlid-627"><a href="/membership">Join Kuali</a></li>
+<li class="leaf menu-mlid-767"><a href="http://www.kuali.org/become-partner">Become a Partner</a></li>
+<li class="leaf menu-mlid-792"><a href="http://www.kuali.org/contribute">Contribute Your Code</a></li>
+<li class="leaf menu-mlid-769"><a href="http://www.kuali.org/jobs">Find a Job</a></li>
+<li class="last leaf menu-mlid-947"><a href="http://www.kuali.org/kd">Kuali Days</a></li>
 </ul></li>
-<li class='expanded menu-mlid-626'><a href='http://www.kuali.org/Community'>Community</a><ul class='menu'><li class='first leaf menu-mlid-639'><a href='http://www.kuali.org/Community' title=''>Overview</a></li>
-<li class='leaf menu-mlid-636'><a href='http://www.kuali.org/community-values'>Kuali Values</a></li>
-<li class='leaf menu-mlid-630'><a href='http://www.kuali.org/Members'>Members</a></li>
-<li class='leaf menu-mlid-629'><a href='http://www.kuali.org/about/partners'>Partners</a></li>
-<li class='last leaf has-children menu-mlid-804'><a href='http://www.kuali.org/adopter-stories'>Adopter-Stories</a></li>
+<li class="expanded menu-mlid-626"><a href="http://www.kuali.org/Community">Community</a><ul class="menu"><li class="first leaf menu-mlid-639"><a href="http://www.kuali.org/Community" title="">Overview</a></li>
+<li class="leaf menu-mlid-636"><a href="http://www.kuali.org/community-values">Kuali Values</a></li>
+<li class="leaf menu-mlid-630"><a href="http://www.kuali.org/Members">Members</a></li>
+<li class="leaf menu-mlid-629"><a href="http://www.kuali.org/about/partners">Partners</a></li>
+<li class="last leaf has-children menu-mlid-804"><a href="http://www.kuali.org/adopter-stories">Adopter-Stories</a></li>
 </ul></li>
-<li class='expanded menu-mlid-552'><a href='http://www.kuali.org/resources'>Resources</a></li>
-<li class='last expanded menu-mlid-696'><a href='http://www.kuali.org/support'>Support</a><ul class='menu'><li class='first leaf menu-mlid-768'><a href='/gethelp'>Get Help</a></li>
-<li class='leaf has-children menu-mlid-764'><a href='http://www.kuali.org/commercial-affiliate-interests'>Commercial Affiliate Program</a></li>
-<li class='leaf menu-mlid-628'><a href='http://www.kuali.org/foundation-staff'>Foundation Staff</a></li>
-<li class='last leaf menu-mlid-773'><a href='http://www.kuali.org/kca-support'>Commercial Support</a></li>
+<li class="expanded menu-mlid-552"><a href="http://www.kuali.org/resources">Resources</a></li>
+<li class="last expanded menu-mlid-696"><a href="http://www.kuali.org/support">Support</a><ul class="menu"><li class="first leaf menu-mlid-768"><a href="/gethelp">Get Help</a></li>
+<li class="leaf has-children menu-mlid-764"><a href="http://www.kuali.org/commercial-affiliate-interests">Commercial Affiliate Program</a></li>
+<li class="leaf menu-mlid-628"><a href="http://www.kuali.org/foundation-staff">Foundation Staff</a></li>
+<li class="last leaf menu-mlid-773"><a href="http://www.kuali.org/kca-support">Commercial Support</a></li>
 </ul></li>
 </ul></div>
   </div>
@@ -697,31 +602,31 @@ width: 100%;
 </div><!-- /.block -->
   </div><!-- /.region -->
 			</div>
-              <div class='message'>   <!-- primary message -->
-				<div class='breadcrumb'> <a href='/' title='Kuali.org'>Kuali.org</a><span class='active'>blogs</span></div>				
+              <div class="message">   <!-- primary message -->
+				<div class="breadcrumb"> <a href="/" title="Kuali.org">Kuali.org</a><span class="active">blogs</span></div>				
                 <h1>kualigan [ˈkəʊˈɑːlɪgən]</h1>
-				<div class='field field-name-field-intro field-type-text-long field-label-hidden'>
-                  <div class='field-items'>
-                    <div class='field-item even'><p>n. <i>Slang</i> a rough lawless young <a href='http://www.kuali.org'>Kuali</a> developer.<br/>
+				<div class="field field-name-field-intro field-type-text-long field-label-hidden">
+                  <div class="field-items">
+                    <div class="field-item even"><p>n. <i>Slang</i> a rough lawless young <a href="http://www.kuali.org">Kuali</a> developer.<br/>
                     [perhaps variant of <i>Houlihan</i>, Irish <i>surname</i>]<br/>
                     <b>kualiganism</b>  n<br/>
                   </p>
 
                 </div></div></div>			</div>   <!-- /primary message -->
 
-                <div class='sidenav'>
-				  <div class='region region-sidenav'>
-    <div class='block block-block first last odd' id='block-block-8'>
+                <div class="sidenav">
+				  <div class="region region-sidenav">
+    <div class="block block-block first last odd" id="block-block-8">
 
       
-  <div class='content'>
+  <div class="content">
     <ul>
-  <li><a href='http://www.kuali.org/contact'>Contact</a></li>
-  <li><a href='http://www.kuali.org/rice/faq'>FAQ</a></li>
-  <li><a href='http://www.kuali.org/news/rice'>News</a></li>
-  <li><a href='http://www.kuali.org/resources/documentation'>Documentation</a></li>
-  <li><a href='http://www.kuali.org/rice/download'>All Versions</a></li>
-</ul>  </div>
+      <li><a href="project-summary.html">Summary</a></li>
+      <li><a href="team-list.html">Team</a></li>
+      <li><a href="license.html">License</a></li>
+      <li><a href="leo.html">Leo</a></li>
+    </ul>
+  </div>
 
 </div><!-- /.block -->
   </div><!-- /.region -->
@@ -729,11 +634,11 @@ width: 100%;
 					</div>
 	</div>   <!-- /prime -->
 
-<div class='stalker' id='stalker'>
-	<div class='midnav clearfix'>   <!-- midpage navigation -->
-		<div class='inner'>
-		      <div class='region region-midnav'>
-    <div class='block block-block first odd' id='block-block-5'>
+<div class="stalker" id="stalker">
+	<div class="midnav clearfix">   <!-- midpage navigation -->
+		<div class="inner">
+		      <div class="region region-midnav">
+    <div class="block block-block first odd" id="block-block-5">
 
       
   <div class="content">
@@ -741,61 +646,67 @@ width: 100%;
   </div>
 
 </div><!-- /.block -->
-<div class='block block-menu-block last even' id='block-menu-block-3'>
+<div class="block block-menu-block last even" id="block-menu-block-3">
 
       
-  <div class='content'>
-    <div class='menu-block-wrapper menu-block-3 menu-name-main-menu parent-mlid-0 menu-level-3'>
-  <ul class='menu'>
-<!--<li class='first leaf active-trail active menu-mlid-655'><a class='active-trail active' href='/rice' title='Overview of Rice'>Overview</a></li>
-<li class='leaf has-children menu-mlid-674'><a href='/rice/modules'>Modules</a></li>
-<li class='leaf menu-mlid-680'><a href='/rice/partners'>Partners</a></li>
-<li class='leaf menu-mlid-686'><a href='/rice/timeline' title='Roadmap for Rice'>Timeline</a></li>
-<li class='leaf menu-mlid-682'><a href='/rice/organization'>Organization</a></li>
-<li class='last leaf has-children menu-mlid-684'><a href='/rice/implementations' title='Who&apos;s using Rice?'>Implementations</a></li>-->
-</ul></div>
+  <div class="content">
+    <div class="menu-block-wrapper menu-block-3 menu-name-main-menu
+                parent-mlid-0 menu-level-3">
+       #mainMenu( $decoration.body.menus )
+<!--
+  <ul class="menu">
+    <li class="first leaf active-trail active menu-mlid-655"><a class="active-trail active" href="/rice" title="Overview of Rice">Overview</a></li>
+    <li class="leaf has-children menu-mlid-674"><a href="/rice/modules">Modules</a></li>
+    <li class="leaf menu-mlid-680"><a href="/rice/partners">Partners</a></li>
+    <li class="leaf menu-mlid-686"><a href="/rice/timeline" title="Roadmap for Rice">Timeline</a></li>
+    <li class="leaf menu-mlid-682"><a href="/rice/organization">Organization</a></li>
+    <li class="last leaf has-children menu-mlid-684"><a href="/rice/implementations" title="Who&apos;s using Rice?">Implementations</a></li>
+    </ul>
+-->
+</div>
   </div>
 
 </div><!-- /.block -->
   </div><!-- /.region -->
 		</div>
 	</div>   <!-- /midpage navigation -->
-<div class='btm'/>
+<div class="btm"/>
 </div>
-<div id='main-content'>
-<div class='active-area'>
-	<div class='main-content clearfix with-sidebar'>   <!-- main content -->
-		<div class='inner'>
-						<div class='left-col'>
-				<div class='field field-name-body field-type-text-with-summary field-label-hidden'><div class='field-items'><div class='field-item even' property='content:encoded'>
+<div id="main-content">
+<div class="active-area">
+	<div class="main-content clearfix with-sidebar">   <!-- main content -->
+		<div class="inner">
+						<div class="left-col">
+				<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded">
         $bodyContent
 </div>
 
 </div></div>			</div>
-							<div class='right-col'>
-										<div class='field field-name-field-sidebar field-type-text-long field-label-hidden'><div class='field-items'><div class='field-item even'>
+							<div class="right-col">
+										<div class="field field-name-field-sidebar field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even">
 
       </div></div></div>				</div>
 					</div>
 </div></div>
 	</div>   <!-- /main content -->
-	<div class='feedback clearfix'>   <!-- feedback bar -->
-		<div class='inner'>
-			  <div class='region region-footertop'>
-    <div class='block block-block first last odd' id='block-block-1'>
+	<div class="feedback clearfix">   <!-- feedback bar -->
+		<div class="inner">
+			  <div class="region region-footertop">
+    <div class="block block-block first last odd" id="block-block-1">
 
       
-  <div class='content'>
+  <div class="content">
   </div>
 
 </div><!-- /.block -->
   </div><!-- /.region -->
 		</div>
 	</div>   <!-- /feedback bar -->
-	<div class='footer'>   <!-- footer -->
-		<div class='inner'>
-			  <div class='region region-footer'>
-    <div class='block block-block first odd' id='block-block-3'>
+	<div class="footer">   <!-- footer -->
+		<div class="inner">
+			  <div class="region region-footer">
+    <div class="block block-block first odd" id="block-block-3"
+>
 
       
   <div class="content">
