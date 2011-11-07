@@ -608,7 +608,7 @@ if (window.jstiming) window.jstiming.load.tick('headEnd');
 <!-- primary message -->
 <div class='breadcrumb'>
 <a href='/' title='Kuali.org'>Kuali.org</a><span class='active'>blogs</span></div>
-<h1>kualigan [ˈkəʊˈɑːlɪgən]</h1>
+<img src="images/kualigan.png" /><br />
 <div class='field field-name-field-intro field-type-text-long field-label-hidden'>
 <div class='field-items'>
 <div class='field-item even'><p>n. <i>Slang</i> a rough lawless young <a href='http://www.kuali.org'>Kuali</a> developer.<br/>
