@@ -460,6 +460,18 @@ z-index: 100;
 width: 100%;
 }
 </style>
+
+<script type="text/javascript">var contextPath = ';';</script>
+<script language="javascript" src="/js/ajs.js"/>
+<script language="javascript" src="/js/jira-global.js"/>
+<script language="javascript" src="/js/jquery-fancybox.js"/>
+<script language="javascript" src="/js/calendar.js"/>
+<script language="javascript" src="/js/viewissue.js"/>
+<script language="javascript" src="/js/autocomplete.js"/>
+<script language="javascript" src="/js/key-commands.js"/>
+<script language="javascript" src="/js/header.js"/>
+<script language="javascript" src="/js/set-focus.js"/>
+    #googleAnalytics( $decoration.googleAnalyticsAccountId )
 </head>
 <body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-236 node-type-subpage stalker">
   <div id="skip-link">
