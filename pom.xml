@@ -44,6 +44,23 @@
         </properties>
       </developer>
     </developers>
+	<build>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>${maven-site-plugin.version}</version>
+          <configuration>
+            <generateReports>${lbcopy-site.generateReports}</generateReports>
+          </configuration>
+        </plugin>
+      </plugins>
+    </build>
+
+    <properties>
+      <maven-site-plugin.version>3.0-beta-3</maven-site-plugin.version>
+      <lbcopy-site.generateReports>true</lbcopy-site.generateReports>
+    </properties>
 
     <scm>
       <connection>scm:git:git://github.com/r351574nc3/maven-kuali-skin.git</connection>
