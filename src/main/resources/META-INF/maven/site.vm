@@ -604,8 +604,8 @@ width: 100%;
 		</div>
 		<div class='inner'>
 				            <div class='logo'>
-	              <a href='/' rel='home' title='Home'>Kuali Foundation</a>
-	            </div>
+                              #banner( $decoration.bannerLeft "bannerLeft" )
+	                        </div>
 	          	          
 			<div class='quick-nav'>
 				  <div class='region region-quicknav'>
